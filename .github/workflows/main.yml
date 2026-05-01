@@ -12,7 +12,7 @@ on:
 permissions:
   id-token: write
   contents: read
-  
+
 jobs:
   build:
     name: Run Terraform
@@ -29,7 +29,7 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4.1.0
         with:
-          role-to-assume: arn:aws:iam::730335519137:role/GitAction
+          role-to-assume: arn:aws:iam::273382295484:role/GitAction
           aws-region: us-east-1
 
       - name: AWS valiadtion
