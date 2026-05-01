@@ -8,3 +8,13 @@ on:
         description: Environment
         default: dev
         required: true
+jobs:
+  build:
+    name: checkout
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: Test Command
+        run: echo "Hi"
