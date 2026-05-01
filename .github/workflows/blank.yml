@@ -1,0 +1,10 @@
+name: Terraform
+run-name: Terraform-test
+
+on:
+  workflow_dispatch:
+    inputs:
+      env:
+        description: Environment
+        default: dev
+        required: true
