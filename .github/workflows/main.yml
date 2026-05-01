@@ -22,7 +22,7 @@ jobs:
           terraform_version: 1.15.0
       
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4
+        uses: aws-actions/configure-aws-credentials@v4.1.0
         with:
           role-to-assume: arn:aws:iam::730335519137:role/GitAction
           aws-region: us-east-1
