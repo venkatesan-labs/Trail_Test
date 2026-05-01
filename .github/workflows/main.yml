@@ -8,9 +8,14 @@ on:
         description: Environment
         default: dev
         required: true
+
+permissions:
+  id-token: write
+  contents: read
+  
 jobs:
   build:
-    name: checkout
+    name: Run Terraform
     runs-on: ubuntu-latest
     steps:
       - name: checkout
