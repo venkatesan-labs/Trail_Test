@@ -16,5 +16,17 @@ jobs:
       - name: checkout
         uses: actions/checkout
 
-      - name: Test Command
-        run: echo "Hi"
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.15.0
+      
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          assume-role: arn:aws:iam::730335519137:role/GitAction
+          aws-region: us-east-1
+
+      - name: AWS valiadtion
+        run: aws sts get-caller-identity
+
